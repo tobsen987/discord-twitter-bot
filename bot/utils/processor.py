@@ -374,9 +374,7 @@ class Processor:
             #    self.status_tweet["user"]["screen_name"], self.status_tweet["id_str"]
             #),
             #title=self.status_tweet["user"]["name"],
-            description=self.text + " ([Link](" + "https://twitter.com/{}/status/{}".format(
-                self.status_tweet["user"]["screen_name"], self.status_tweet["id_str"]
-            ) + "))",
+            description=self.text,
             timestamp=datetime.strptime(
                 self.status_tweet["created_at"], "%a %b %d %H:%M:%S +0000 %Y"
             ),
@@ -384,7 +382,10 @@ class Processor:
 
         self.embed.set_author(
             name=self.status_tweet["user"]["screen_name"],
-            url="https://twitter.com/" + self.status_tweet["user"]["screen_name"],
+            #url="https://twitter.com/" + self.status_tweet["user"]["screen_name"],
+            url="https://twitter.com/{}/status/{}".format(
+                self.status_tweet["user"]["screen_name"], self.status_tweet["id_str"]
+            ),
             icon_url=self.status_tweet["user"]["profile_image_url"],
         )
         self.embed.set_footer(
