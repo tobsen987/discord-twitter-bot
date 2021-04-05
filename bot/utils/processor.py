@@ -389,7 +389,7 @@ class Processor:
         )
         self.embed.set_footer(
             text="Tweeted on",
-            icon_url="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697029-twitter-512.png",
+            icon_url="https://i.imgur.com/ePBVRCg.png",
         )
 
     def send_message(self, wh_url):
