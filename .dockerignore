@@ -2,12 +2,12 @@
 **
 
 # Allow files
-!/Dockerfile
-!/LICENSE
-!/README.md
-!/requirements.txt
-!/tox.ini
-!/qemu-*-static
+!Dockerfile
+!LICENSE
+!README.md
+!requirements.txt
+!tox.ini
+!qemu-*-static
 
 # Allow directories
 !/bot/**
