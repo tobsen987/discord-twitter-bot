@@ -370,11 +370,13 @@ class Processor:
     def create_embed(self):
         self.embed = Embed(
             colour=random.choice(COLORS),
-            url="https://twitter.com/{}/status/{}".format(
+            #url="https://twitter.com/{}/status/{}".format(
+            #    self.status_tweet["user"]["screen_name"], self.status_tweet["id_str"]
+            #),
+            #title=self.status_tweet["user"]["name"],
+            description=self.text + "([Link](" + "https://twitter.com/{}/status/{}".format(
                 self.status_tweet["user"]["screen_name"], self.status_tweet["id_str"]
-            ),
-            title=self.status_tweet["user"]["name"],
-            description=self.text,
+            ) + "))",
             timestamp=datetime.strptime(
                 self.status_tweet["created_at"], "%a %b %d %H:%M:%S +0000 %Y"
             ),
@@ -386,7 +388,7 @@ class Processor:
             icon_url=self.status_tweet["user"]["profile_image_url"],
         )
         self.embed.set_footer(
-            text="Tweet created on",
+            text="Tweeted on",
             icon_url="https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697029-twitter-512.png",
         )
 
