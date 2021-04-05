@@ -374,7 +374,7 @@ class Processor:
             #    self.status_tweet["user"]["screen_name"], self.status_tweet["id_str"]
             #),
             #title=self.status_tweet["user"]["name"],
-            description=self.text + "([Link](" + "https://twitter.com/{}/status/{}".format(
+            description=self.text + " ([Link](" + "https://twitter.com/{}/status/{}".format(
                 self.status_tweet["user"]["screen_name"], self.status_tweet["id_str"]
             ) + "))",
             timestamp=datetime.strptime(
