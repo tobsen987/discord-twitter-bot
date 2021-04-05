@@ -4,7 +4,7 @@
 # Allow files
 !/Dockerfile
 !/LICENSE
-!/READNE.md
+!/README.md
 !/requirements.txt
 !/tox.ini
 !/qemu-*-static
