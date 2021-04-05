@@ -10,8 +10,8 @@
 !qemu-*-static
 
 # Allow directories
-!/bot/**
-!/tests/**
+!bot/**
+!tests/**
 
 # Ignore files inside allowed directories
 **/*~
